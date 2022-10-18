@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                },
+            }
+        }
+    }
+</script>
+
+<body>
+
+    <div>
+         <!-- ================ header-section ============== -->
+         <header>
+            <div>
+                <nav class="flex sm:flex hidden md:hidden lg:flex justify-between absolute top-0 right-0 left-0 z-20">
+                    <ul class="flex items-center">
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./form.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/vector.png" alt="vector"></div>
+                                    <div>Devis Montage</div>
+                                </div>
+                            </a></li>
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./services.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/question-mark.png" alt="q-mark"></div>
+                                    <div>Besoin d'aide !</div>
+                                </div>
+                            </a></li>
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./product.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/house.png" alt="house"></div>
+                                    <div>Nos Chalets</div>
+                                </div>
+                            </a></li>
+                    </ul>
+                    <ul>
+                        <li class="flex"><a href="">
+                                <div class="m-0 flex justify-center"><img width="130px" src="./assets/images/logo.png"
+                                        alt=""></div>
+                                <div>
+                                    <p class="text-xs text-lightblue opacity-60 font-semibold">Le spécialiste de la
+                                        construction des chalets en kit</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                    <ul class="flex items-center">
+                        <li class="text-sm text-blue font-semibold mr-5"><a href="./about.html">Contactez-nous</a></li>
+                        <li class="text-sm text-blue font-semibold mr-5"><a id="selected-language" href="">Eng
+                            </a></li>
+
+                        <div class="flex">
+                            <div class="text-sm text-blue font-semibold opacity-60 mr-5">
+                                <p>Consultation</p>
+                                <p class="hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-sm text-blue font-semibold opacity-60 mr-5">
+                                <p>Service clients</p>
+                                <p class="hover:text-green-700"><a href="tel:07 49 08 79 70">07 49 08 79 70</a></p>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- ================ hamburger ===================== -->
+            <div class="hamburger">
+                <nav class="sm:hidden md:block lg:hidden rounded-none absolute top-0 right-0 left-0 z-20">
+                    <ul class="flex justify-between items-center w-full items-center">
+                        <div class="flex">
+                            <div class="text-small text-blue font-light opacity-60 mr-1">
+                                <p>Consultation</p>
+                                <p class="hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-small text-blue font-light opacity-60">
+                                <p>Service clients</p>
+                                <p class="hover:text-green-700"><a href="tel:07 49 08 79 70">07 49 08 79 70</a></p>
+                            </div>
+                        </div>
+                        <li class="flex"><a href="">
+                                <div><img width="80px" src="./assets/images/logo.png" alt=""></div>
+                            </a></li>
+                        <div>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="hidden absolute bg-white py-5 flex text-center justify-center top-12 right-0 left-0"
+                            id="myLinks">
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./form.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/vector.png" alt="vector"></div>
+                                        <div>Devis Montage</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./services.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/question-mark.png" alt="q-mark">
+                                        </div>
+                                        <div>Besoin d'aide !</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./product.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/house.png" alt="house"></div>
+                                        <div>Nos Chalets</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="about.html">Contactez-nous</a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ================= information-and-search====================== -->
+        <div class="mt-12 pt-12 flex flex-col lg:flex-row md:flex-row sm:flex-col">
+            <div class="w-full lg:w-3/4 md:w-3/4 px-0 md:px-10">
+                <div class="flex w-full">
+                    <div class="search-border w-full lg:mx-5 mr-1 flex items-center">
+                        <div class="filter my-2 lg:mx-1 px-1 py-1 lg:py-2 lg:px-3 flex items-center">
+                            <p class="text-green text-xs md:text-sm lg:text-sm">#under $100</p>
+                            <div class="lg:ml-3 w-5">
+                                <img src="./assets/images/green-cross.png" alt="cross">
+                            </div>
+                        </div>
+                        <div class="lg:ml-4 ml-1">
+                            <img src="./assets/images/search-icon.png" alt="search">
+                        </div>
+                        <div class="lg:ml-3">
+                            <input class="outline-none" type="search" placeholder="Search with hastags...">
+                        </div>
+                    </div>
+                    <div class="curve px-1 py-1 lg:py-2 lg:px-3 flex justify-center items-center">
+                        <img class="w-5" src="./assets/images/curve-arrow.png" alt="arrow">
+                    </div>
+                </div>
+                <div class="mx-4 mt-3 flex flex-wrap">
+                    <p class="text-green text-sm mt-1 opacity-50">#under $100</p>
+                    <p class="text-green ml-8 text-sm mt-1">#upto $100</p>
+                    <p class="text-green ml-8 text-sm mt-1">#Wooden Roof</p>
+                    <p class="text-green ml-8 text-sm mt-1">#250mm floor</p>
+                    <p class="text-green ml-8 text-sm mt-1">#Concrete Floor</p>
+                    <p class="text-green ml-8 text-sm mt-1">#Wooden Floor</p>
+                    <p class="text-green ml-8 text-sm mt-1">#Wooden Roof</p>
+                    <p class="text-green ml-8 text-sm mt-1">#250mm floor</p>
+                    <p class="text-green ml-8 text-sm mt-1">#Wooden Floor</p>
+                    <p class="text-green ml-8 text-sm mt-1">#under $100</p>
+                    <p class="text-green ml-8 text-sm mt-1">#upto $100</p>
+                    <p class="text-green ml-8 text-sm mt-1">#Concrete Floor</p>
+                    <p class="text-green ml-8 text-sm mt-1">#Shade like Roof</p>
+                    <p class="text-green ml-8 text-sm mt-1">#Concrete Floor</p>
+                </div>
+                <div class="curve flex justify-center mt-4 text-center">
+                    <div class="px-3 md:px-12 md:mx-12 mx-3 py-8">
+                        <h1 class="text-orange text-xl font-extrabold">Services</h1>
+                        <p class="text-orange text-sm pt-4">Un chalet en bois est un choix extrêmement polyvalent en ce
+                            qui concerne ses possibilités d'utilisation. Que
+                            vous ayez besoin d'une salle de séjour supplémentaire dans votre jardin, d'un espace atelier
+                            éloigné pour votre
+                            hobby ou d'un endroit confortable dans votre jardin pour passer de bons moments avec votre
+                            famille et vos
+                            amis.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="service-bg mt-3 p-3 mx-2 w-full">
+                        <div class="flex w-full">
+                            <div class="w-1/2">
+                                <img class="w-full" src="./assets/images/Base.png" alt="base">
+                            </div>
+                            <div class="ml-3 w-1/2">
+                                <img class="w-full" src="./assets/images/Base-2.png" alt="Base">
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between py-2 px-4">
+                            <div class="">
+                                <h1 class="text-lightblack text-xl font-extrabold">Assistance aux plans <br> <span
+                                        class="text-orange">(Forfait)</span></h1>
+                                <p class="text-lightblack opacity-70 lg:px-10">Nous vous aidons a realiser vos plans que
+                                    vous souhaitez transmettre pour la
+                                    commande a l usine.</p>
+                            </div>
+                            <div class="pt-2">
+                                <div class="flex justify-end">
+                                    <div>
+                                        <p class="text-xs flex justify-end opacity-50">200,00 €</p>
+                                        <p class="text-xl text-orange font-extrabold">150,00 €</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="btn bg-green flex justify-between px-8 mt-2 py-4 text-white items-center">Voir
+                                    les
+                                    Services<img class="pl-3" src="./assets/images/ArrowRight.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="service-bg p-3 mt-3 mx-2 w-full">
+                        <div class="flex w-full">
+                            <div class="w-1/2">
+                                <img class="w-full" src="./assets/images/Base-3.png" alt="base">
+                            </div>
+                            <div class="ml-3 w-1/2">
+                                <img class="w-full" src="./assets/images/Base-4.png" alt="Base">
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between py-2 px-4">
+                            <div class="">
+                                <h1 class="text-lightblack text-xl font-extrabold">Support au montage <span
+                                        class="text-orange">(Forfait avec demarches SAV)</span></h1>
+                                <p class="text-lightblack opacity-70 lg:px-10">Nous vous aidons a realiser votre montage
+                                    selon vos plans et les eventuelles
+                                    demarches SAV pour la commande a l usine.</p>
+                            </div>
+                            <div class="pt-2">
+                                <div class="flex justify-end">
+                                    <div class="flex items-center">
+                                        <p class="text-xs flex justify-end opacity-50 mr-2">200,00 €</p>
+                                        <p class="text-xl text-orange font-extrabold">150,00 €</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="btn bg-green flex justify-between px-8 mt-2 py-4 text-white items-center">Voir
+                                    les
+                                    Services<img class="pl-3" src="./assets/images/ArrowRight.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="service-bg p-3 mt-3 mx-2 w-full">
+                        <div class="flex w-full">
+                            <div class="w-1/2">
+                                <img class="w-full h-full" src="./assets/images/chose-1.png" alt="base">
+                            </div>
+                            <div class="ml-3 w-1/2">
+                                <img class="w-full h-full" src="./assets/images/Base-pipe.png" alt="Base">
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row lg:flex-row justify-between py-2 px-4">
+                            <div class="">
+                                <h1 class="text-lightblack text-xl font-extrabold">Electricite - Plomberie -<span
+                                        class="text-orange">Finitions</span></h1>
+                                <p class="text-lightblack opacity-70">Nous vous aidons a realiser l instalation
+                                    electrique de votre projet.</p>
+                            </div>
+                            <div class="pt-2">
+                                <div class="flex justify-end">
+                                    <div class="flex items-center">
+                                        <p class="text-xs flex justify-end opacity-50 mr-2">200,00 €</p>
+                                        <p class="text-xl text-orange font-extrabold">150,00 €</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="btn bg-green flex justify-between px-8 mt-2 py-4 text-white items-center">Voir
+                                    les
+                                    Services<img class="pl-3" src="./assets/images/ArrowRight.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="service-bg p-3 mt-3 mx-2 w-full">
+                        <div class="flex w-full">
+                            <div class="w-1/2">
+                                <img class="w-full" src="./assets/images/Base-service.png" alt="base">
+                            </div>
+                            <div class="ml-3 w-1/2">
+                                <img class="w-full" src="./assets/images/building-block.png" alt="Base">
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-col lg:flex-row justify-between py-2 px-4">
+                            <div class="">
+                                <h1 class="text-lightblack text-xl font-extrabold">Assistance complete au projet <span
+                                        class="text-orange">(Forfait)</span></h1>
+                                <p class="text-lightblack opacity-70 lg:pr-10">Nous vous aidons a realiser votre projet :
+                                    - Vos plans que vous souhaitez transmettre pour la commande a l usine.
+                                    - Aide a la maitrise d oeuvre ( Permis, Montage, Plomberie, electricite)</p>
+                            </div>
+                            <div class="pt-2">
+                                <div class="flex justify-end">
+                                    <div class="flex items-center">
+                                        <p class="text-xs flex justify-end opacity-50 mr-2">200,00 €</p>
+                                        <p class="text-xl text-orange font-extrabold">150,00 €</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="btn bg-green flex justify-between px-8 mt-2 py-4 text-white items-center">Voir
+                                    les
+                                    Services<img class="pl-3" src="./assets/images/ArrowRight.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mx-2 md:w-1/4 lg:w-1/4">
+                <div>
+                    <p class="text-lg text-black mb-4 font-extrabold">Information</p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="border py-3">
+                        <div class="w-full">
+                            <img class="h-56 mx-auto" width="300px" src="./assets/images/unsplash.png" alt="splash">
+                        </div>
+                        <div class="px-4 w-full">
+                            <div class="text-center">
+                                <p class=" lg:text-xl md:text-sm  font-extrabold text-lightblack">Lorem Ipsum is simply
+                                    dummy
+                                    text of the printing and ...</p>
+                                <p class="text-lightblack text-sm opacity-70 py-2">Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                    dumm...</p>
+                            </div>
+                            <div class="flex justify-center">
+                                <button
+                                    class="btn-2 bg-green flex justify-between px-10 py-3 text-white md:text-xs lg:text-lg items-center">See
+                                    all
+                                    Services</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-3">
+                    <div class="border py-3">
+                        <div class="w-full">
+                            <img class="h-56 mx-auto" width="300px" src="./assets/images/Base-4.png" alt="splash">
+                        </div>
+                        <div class="px-4 w-full">
+                            <div class="text-center">
+                                <p class=" lg:text-xl md:text-sm  font-extrabold text-lightblack">Lorem Ipsum is simply
+                                    dummy
+                                    text of the printing and ...</p>
+                                <p class="text-lightblack text-sm opacity-70 py-2">Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                    dumm...</p>
+                            </div>
+                            <div class="flex justify-center">
+                                <button
+                                    class="btn-2 bg-green flex justify-between px-10 py-3 text-white md:text-xs lg:text-lg items-center">See
+                                    all
+                                    Services</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-3">
+                    <div class="border py-3">
+                        <div class="w-full">
+                            <img class="h-56 mx-auto" width="300px" src="./assets/images/Bitmap-1.png" alt="splash">
+                        </div>
+                        <div class="px-4 w-full">
+                            <div class="text-center">
+                                <p class=" lg:text-xl md:text-sm  font-extrabold text-lightblack">Lorem Ipsum is simply
+                                    dummy
+                                    text of the printing and ...</p>
+                                <p class="text-lightblack text-sm opacity-70 py-2">Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                    dumm...</p>
+                            </div>
+                            <div class="flex justify-center">
+                                <button
+                                    class="btn-2 bg-green flex justify-between px-10 py-3 text-white md:text-xs lg:text-lg items-center">See
+                                    all
+                                    Services</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-3">
+                    <div class="border py-3">
+                        <div class="w-full">
+                            <img class="h-56 mx-auto" width="300px" src="./assets/images/building-block.png"
+                                alt="splash">
+                        </div>
+                        <div class="px-4 w-full">
+                            <div class="text-center">
+                                <p class=" lg:text-xl md:text-sm  font-extrabold text-lightblack">Lorem Ipsum is simply
+                                    dummy
+                                    text of the printing and ...</p>
+                                <p class="text-lightblack text-sm opacity-70 py-2">Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                    dumm...</p>
+                            </div>
+                            <div class="flex justify-center">
+                                <button
+                                    class="btn-2 bg-green flex justify-between px-10 py-3 text-white md:text-xs lg:text-lg items-center">See
+                                    all
+                                    Services</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-3">
+                    <div class="border py-3">
+                        <div class="w-full">
+                            <img class="h-56 mx-auto" width="300px" src="./assets/images/man-base.png" alt="splash">
+                        </div>
+                        <div class="px-4 w-full">
+                            <div class="text-center">
+                                <p class=" lg:text-xl md:text-sm  font-extrabold text-lightblack">Lorem Ipsum is simply
+                                    dummy
+                                    text of the printing and ...</p>
+                                <p class="text-lightblack text-sm opacity-70 py-2">Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                    dumm...</p>
+                            </div>
+                            <div class="flex justify-center">
+                                <button
+                                    class="btn-2 bg-green flex justify-between px-10 py-3 text-white md:text-xs lg:text-lg items-center">See
+                                    all
+                                    Services</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- slider -->
+
+
+        <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner relative w-full overflow-hidden">
+                <div class="carousel-item active relative float-left w-full">
+
+
+                    <!-- slider-1 -->
+                    <div class="mx-10">
+                        <div class="flex flex-wrap justify-between my-8">
+                            <div class="slider-card hidden sm:block px-5  w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card px-5 md:w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- slider-1 -->
+
+
+
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <!-- slider-2 -->
+                    <div class="mx-10">
+                        <div class="flex flex-wrap justify-between my-8">
+                            <div class="slider-card hidden sm:block px-5  w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card px-5 md:w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- slider-2 -->
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <!-- slider-3 -->
+                    <div class="mx-10">
+                        <div class="flex flex-wrap justify-between my-8">
+                            <div class="slider-card hidden sm:block px-5  w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card hidden sm:block px-5 w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+                            <div class="slider-card px-5 md:w-2/12 py-3">
+                                <div class="pt-4">
+                                    <img src="./assets/images/comma.png" alt="comma">
+                                </div>
+                                <div class="py-4">
+                                    <p class="text-lg text-black font-bold">Best on the market</p>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex">
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                        <div class="star-bg mr-1 flex justify-center items-center">
+                                            <div>
+                                                <img src="./assets/images/star.png" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs ml-3 opacity-60">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class=" pt-2">
+                                    <p class="opacity-80 text-sm">I love this product because the support is great.
+                                        Please ...</p>
+                                </div>
+                                <div class="pt-2">
+                                    <div class="bar-2"></div>
+
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-lg font-bold">Worldtraveler</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- slider-3 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== get-in-touch-section ========================== -->
+        <div class="gettouch-bg py-8">
+            <div class="flex justify-center">
+                <div>
+                    <div>
+                        <h1 class="text-white text-center text-3xl">Get In Touch!</h1>
+                    </div>
+                    <div class="flex pt-5 pl-6 flex-col sm:flex-row">
+                        <div class="flex items-center">
+                            <div>
+                                <img src="./assets/images/Call.png" alt="call">
+                            </div>
+                            <div class=" ml-3">
+                                <p class="text-white hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-white hidden lg:block ml-5">
+                                |
+                            </div>
+                        </div>
+                        <div class="flex items-center sm:ml-5">
+                            <div>
+                                <img src="./assets/images/exclamation.png" alt="call">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-white">On vous rappel?</p>
+                            </div>
+                            <div class="text-white hidden lg:block sm:ml-5">
+                                |
+                            </div>
+                        </div>
+                        <div class="flex items-center sm:ml-5">
+                            <div>
+                                <img src="./assets/images/Message.png" alt="call">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-white">voyer votre demande</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center items-center sm:ml-5">
+                            <dvi>
+                                <div class="care-bg flex items-center justify-center">
+                                    <img width="23px" src="./assets/images/care.png" alt="call">
+                                </div>
+                            </dvi>
+                            <div class="ml-3">
+                                <p class="text-white">Service Apres-vente <br><a class="hover:text-green-700" href="tel:+370 64 82 34 34">+370 64 82 34 34</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="flex">
+                    <div>
+                        <img src="./assets/images/fb.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/insta.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/twiter.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/ball.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/Envato.png" alt="facebook">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= Footer =================== -->
+
+        <footer class="">
+            <div class="flex py-10 justify-center">
+                <div class="flex flex-col md:flex-row px-5 justify-center w-full">
+                    <div>
+                        <div class="flex justify-center sm:justify-start">
+                            <img src="./assets/images/footer-logo.png" alt="logo">
+                        </div>
+                        <div class="pt-5">
+                            <p class="w-full text-center sm:text-left sm:w-3/5 text-gray opacity-70">Lorem Ipsum is
+                                simply dummy text of the printing and
+                                typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center sm:justify-start text-center px-5 py-5">
+
+                        <div class="ml-5">
+                            <div>
+                                <p class="text-left text-white">Pages</p>
+                            </div>
+                            <div class="text-left opacity-60 text-gray mt-5">
+                                <p class="hover:text-orange-500"><a href="./home.html">Home</a></p>
+                                <p class="hover:text-orange-500"><a href="./form.html">Devis</a></p>
+                                <p class="hover:text-orange-500"><a href="./services.html">Services</a></p>
+                                <p class="hover:text-orange-500"><a href="./product.html">Products</a></p>
+                            </div>
+                        </div>
+                        <div class="ml-10">
+                            <div>
+                                <p class="text-white text-left">Pages</p>
+                            </div>
+                            <div class="text-left opacity-60 text-gray mt-5">
+                                <p class="p-0 text-white hover:text-orange-500"><a href="./about.html">Contactez-nous</a></p>
+                                <p class="p-0 text-white  hover:text-orange-500"><a href="./services.html">Service clients</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="footer-bar ">
+
+                </div>
+            </div>
+            <div>
+                <p class="text-center text-white py-4 opacity-70">Copyright © 2022 Montage-Chalet.fr</p>
+            </div>
+        </footer>
+
+
+    </div>
+
+</body>
+
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+</script>
+
+</html>

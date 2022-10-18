@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                },
+            }
+        }
+    }
+</script>
+
+<body>
+
+    <div>
+         <!-- ================ header-section ============== -->
+         <header>
+            <div>
+                <nav class="flex sm:flex hidden md:hidden lg:flex justify-between absolute top-0 right-0 left-0 z-20">
+                    <ul class="flex items-center">
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./form.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/vector.png" alt="vector"></div>
+                                    <div>Devis Montage</div>
+                                </div>
+                            </a></li>
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./services.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/question-mark.png" alt="q-mark"></div>
+                                    <div>Besoin d'aide !</div>
+                                </div>
+                            </a></li>
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./product.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/house.png" alt="house"></div>
+                                    <div>Nos Chalets</div>
+                                </div>
+                            </a></li>
+                    </ul>
+                    <ul>
+                        <li class="flex"><a href="">
+                                <div class="m-0 flex justify-center"><img width="130px" src="./assets/images/logo.png"
+                                        alt=""></div>
+                                <div>
+                                    <p class="text-xs text-lightblue opacity-60 font-semibold">Le spécialiste de la
+                                        construction des chalets en kit</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                    <ul class="flex items-center">
+                        <li class="text-sm text-blue font-semibold mr-5"><a href="./about.html">Contactez-nous</a></li>
+                        <li class="text-sm text-blue font-semibold mr-5"><a id="selected-language" href="">Eng
+                            </a></li>
+
+                        <div class="flex">
+                            <div class="text-sm text-blue font-semibold opacity-60 mr-5">
+                                <p>Consultation</p>
+                                <p class="hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-sm text-blue font-semibold opacity-60 mr-5">
+                                <p>Service clients</p>
+                                <p class="hover:text-green-700"><a href="tel:07 49 08 79 70">07 49 08 79 70</a></p>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- ================ hamburger ===================== -->
+            <div class="hamburger">
+                <nav class="sm:hidden md:block lg:hidden rounded-none absolute top-0 right-0 left-0 z-20">
+                    <ul class="flex justify-between items-center w-full items-center">
+                        <div class="flex">
+                            <div class="text-small text-blue font-light opacity-60 mr-1">
+                                <p>Consultation</p>
+                                <p class="hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-small text-blue font-light opacity-60">
+                                <p>Service clients</p>
+                                <p class="hover:text-green-700"><a href="tel:07 49 08 79 70">07 49 08 79 70</a></p>
+                            </div>
+                        </div>
+                        <li class="flex"><a href="">
+                                <div><img width="80px" src="./assets/images/logo.png" alt=""></div>
+                            </a></li>
+                        <div>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="hidden absolute bg-white py-5 flex text-center justify-center top-12 right-0 left-0"
+                            id="myLinks">
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./form.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/vector.png" alt="vector"></div>
+                                        <div>Devis Montage</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./services.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/question-mark.png" alt="q-mark">
+                                        </div>
+                                        <div>Besoin d'aide !</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./product.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/house.png" alt="house"></div>
+                                        <div>Nos Chalets</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="about.html">Contactez-nous</a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ========================= product-detail======================= -->
+
+
+        <div class="mt-12 pt-12 flex flex-col md:flex-col lg:flex-row mx-10">
+            <div class="w-full lg:w-1/2 md:w-full mx-5">
+                <div>
+                    <img src="./assets/images/about-base.png" alt="base">
+                </div>
+                <div class="flex justify-center">
+                    <img src="./assets/images/Base-2.png" alt="base">
+                </div>
+                <div>
+                    <div class="filter  bg-white border my-2 mx-1 py-2 px-3 flex justify-between">
+                        <p class="text-blue opacity-60">Dimensions L x l</p>
+                        <div class="ml-3">
+                            <p class="text-blue opacity-60">9,40m x 6,50m</p>
+                        </div>
+                    </div>
+                    <div class="filter  bg-white border my-2 mx-1 py-2 px-3 flex justify-between">
+                        <p class="text-blue opacity-60">Epaisseurs des murs</p>
+                        <div class="ml-3">
+                            <p class="text-blue opacity-60">150mm / 250mm
+                            </p>
+                        </div>
+                    </div>
+                    <div class="filter  bg-white border my-2 mx-1 py-2 px-3 flex justify-between">
+                        <p class="text-blue opacity-60">Hauteur interieur min / au faitage</p>
+                        <div class="ml-3">
+                            <p class="text-blue opacity-60">2,25m / 3,65m</p>
+                        </div>
+                    </div>
+                    <div class="filter  bg-white border my-2 mx-1 py-2 px-3 flex justify-between">
+                        <p class="text-blue opacity-60">Type isolation</p>
+                        <div class="ml-3">
+                            <p class="text-blue opacity-60">Non / 150mm / 250mm</p>
+                        </div>
+                    </div>
+                    <div class="filter  bg-white border my-2 mx-1 py-2 px-3 flex justify-between">
+                        <p class="text-blue opacity-60">Dimensions L x l</p>
+                        <div class="ml-3">
+                            <p class="text-blue opacity-60">9,40m x 6,50m</p>
+                        </div>
+                    </div>
+                    <div class="filter  bg-white border my-2 mx-1 py-2 px-3 flex justify-between">
+                        <p class="text-blue opacity-60">Epaisseurs des murs</p>
+                        <div class="ml-3">
+                            <p class="text-blue opacity-60">150mm / 250mm
+                            </p>
+                        </div>
+                    </div>
+                    <div class="filter  bg-white border my-2 mx-1 py-2 px-3 flex justify-between">
+                        <p class="text-blue opacity-60">Hauteur interieur min / au faitage</p>
+                        <div class="ml-3">
+                            <p class="text-blue opacity-60">2,25m / 3,65m</p>
+                        </div>
+                    </div>
+                    <div class="filter  bg-white border my-2 mx-1 py-2 px-3 flex justify-between">
+                        <p class="text-blue opacity-60">Type isolation</p>
+                        <div class="ml-3">
+                            <p class="text-blue opacity-60">Non / 150mm / 250mm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mx-5">
+                <div>
+                    <p class="text-lg text-black mb-4 font-extrabold">LILY 20 sq.m.,</p>
+                </div>
+                <div class="text-sm text-lightblack opacity-70 ">
+                    <p>Nous vous aidons a realiser vos plans que vous souhaitez transmettre pour la
+                        commande a l usine.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                        only five centuries, but also the leap into electronic typesetting, remaining essentially
+                        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                        Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                        including versions of Lorem Ipsum.Nous vous aidons a realiser vos plans que vous souhaitez
+                        transmettre pour la
+                        commande a l usine.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                        only five centuries, but also the leap into electronic typesetting, remaining essentially
+                        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                        Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                        including versions of Lorem Ipsum.Nous vous aidons a realiser vos plans que vous souhaitez
+                        transmettre pour</p>
+                </div>
+                <div>
+                    <div class="flex flex-col lg:flex-row items-center justify-between">
+                        <div>
+                            <p class="text-sm text-lightblack">Kit livré *:</p>
+                        </div>
+                        <div>
+                            <div class="filter my-2 mx-1 py-3 px-12 flex justify-center">
+                                <div class="pl-0 lg:pl-12">
+                                    <img src="./assets/images/Bag-2.png" alt="bag">
+                                </div>
+                                <div class="ml-1 pr-12">
+                                    <p class="text-green">100,00 €</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-col lg:flex-row items-center justify-between mt-2">
+                        <div>
+                            <p class="text-sm text-lightblack">Hors d'eau, Hors d'air:</p>
+                        </div>
+                        <div>
+                            <div class="filter my-2 mx-1 py-3 px-12 flex justify-center">
+                                <div class="md:pl-0 lg:pl-12">
+                                    <img src="./assets/images/Bag-2.png" alt="bag">
+                                </div>
+                                <div class="ml-1 pr-12">
+                                    <p class="text-green">100,00 €</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-col lg:flex-row items-center justify-between mt-2">
+                        <div>
+                            <p class="text-sm text-lightblack">Chalet clé en main:</p>
+                        </div>
+                        <div>
+                            <div class="filter my-2 mx-1 py-3 px-12 flex justify-center">
+                                <div class="md:pl-0 lg:pl-12">
+                                    <img src="./assets/images/Bag-2.png" alt="bag">
+                                </div>
+                                <div class="ml-1 pr-12">
+                                    <p class="text-green">100,00 €</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- =================== button ================== -->
+                <div>
+                    <div class="flex justify-center my-8">
+                        <div
+                            class="filter  bg-white border my-2 mx-1 py-2 px-6 flex flex-col lg:flex-row md:flex-col items-center justify-center">
+                            <div>
+                                <img src="./assets/images/green-download.png" alt="download">
+                            </div>
+                            <div class="ml-3 lg:px-4">
+                                <p class="text-green text-xs lg:text-sm">Technical spec.pdf</p>
+                            </div>
+                        </div>
+                        <div class="filter  bg-white border my-2 mx-1 py-2 px-4 items-center flex justify-center">
+                            <div>
+                                <img src="./assets/images/green-download.png" alt="download">
+                            </div>
+                            <div class="ml-3 px-4">
+                                <p class="text-green">Assembly.pdf</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-10 my-8 flex justify-center">
+            <div class="flex ">
+                <div class="flex flex-col lg:flex-row md:flex-col mx-5">
+                    <div class="lg:w-1/3 w-full md:w-full">
+                        <p class="text-lg  text-black mb-4 font-extrabold">Our Galery</p>
+                        <div class="text-sm text-lightblack opacity-70 ">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s,</p>
+                        </div>
+                        <img class="h-64 mt-8" src="./assets/images/stairs.png" alt="hut">
+
+                    </div>
+                    <div class="ml-5 w-1/4 lg:w-1/3 w-full md:w-full">
+                        <div>
+                            <img width="250px" src="./assets/images/tree-house.png" alt="house">
+                        </div>
+                        <div>
+                            <img width="250px" src="./assets/images/block-house.png" alt="house">
+                        </div>
+                    </div>
+                    <div class="flex mx-5 w-2/5 lg:w-1/3 w-full md:w-full">
+                        <div class="ml-5">
+                            <img width="185px" src="./assets/images/two-floor.png" alt="floor">
+                        </div>
+                        <div class="ml-5">
+                            <div>
+                                <img width="260px" src="./assets/images/wire-room.png" alt="room">
+                            </div>
+                            <div>
+                                <img width="280px" src="./assets/images/mini-hut.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ============== services-search ================ -->
+        <div class="flex justify-center text-center mt-10 pt-5">
+            <div>
+                <div class="bar m-auto"></div>
+                <div>
+                    <p class="text-green font-bold">Near Services</p>
+                </div>
+                <div>
+                    <p class="text-xl font-extrabold text-lightblack">Relevent Products</p>
+                </div>
+            </div>
+        </div>
+        <!-- slider -->
+
+
+        <div id="carouselExampleCaptions" class="carousel slide relative my-10" data-bs-ride="carousel">
+            <div class="carousel-indicators absolute right-0 carousel_2 left-0 flex justify-center p-0 mb-0 mt-7">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner relative w-full overflow-hidden">
+                <div class="carousel-item active relative float-left w-full">
+
+                    <!-- slider-1 -->
+                    <div class="flex justify-center">
+                        <div class="service-bg p-3 mx-2 w-full sm:w-1/2">
+                            <div class="flex justify-center">
+                                <div>
+                                    <img src="./assets/images/Base.png" alt="base">
+                                </div>
+                                <div class="ml-3">
+                                    <img src="./assets/images/Base-2.png" alt="Base">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h1 class="text-lightblack text-xl font-extrabold">Assistance aux plans <span
+                                        class="text-orange">(Forfait)</span></h1>
+                                <p class="text-lightblack opacity-70">Nous vous aidons a realiser vos plans que vous
+                                    souhaitez
+                                    transmettre pour la</p>
+                            </div>
+                            <div class="flex justify-center pt-2 relative">
+                                <div class="btn bg-green flex justify-between px-8 py-4 text-white items-center">Voir
+                                    les
+                                    Services<img class="pl-3" src="./assets/images/ArrowRight.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- slider-1 -->
+
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <!-- slider-2 -->
+                    <div class="flex justify-center">
+                        <div class="service-bg p-3 mx-2 w-full sm:w-1/2">
+                            <div class="flex justify-center">
+                                <div>
+                                    <img src="./assets/images/Base-3.png" alt="base">
+                                </div>
+                                <div class="ml-3">
+                                    <img src="./assets/images/Base-4.png" alt="Base">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h1 class="text-lightblack text-xl font-extrabold">Support au montage <span
+                                        class="text-orange">(Forfait avec demarches SAV) </span></h1>
+                                <p class="text-lightblack opacity-70">Nous vous aidons a realiser votre montage selon
+                                    vos plans
+                                    et les eventuelles
+                                    demarches SAV pour la commande a l usine.</p>
+                            </div>
+                            <div class="flex justify-center pt-2">
+                                <div class="btn bg-green flex justify-between px-8 py-4 text-white items-center">Voir
+                                    les
+                                    Services<img class="pl-3" src="./assets/images/ArrowRight.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- slider-2 -->
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <!-- slider-3 -->
+                    <div class="flex justify-center">
+                        <div class="service-bg p-3 mx-2 w-full sm:w-1/2">
+                            <div class="flex justify-center">
+                                <div>
+                                    <img src="./assets/images/Base.png" alt="base">
+                                </div>
+                                <div class="ml-3">
+                                    <img src="./assets/images/Base-2.png" alt="Base">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h1 class="text-lightblack text-xl font-extrabold">Assistance aux plans <span
+                                        class="text-orange">(Forfait)</span></h1>
+                                <p class="text-lightblack opacity-70">Nous vous aidons a realiser vos plans que vous
+                                    souhaitez
+                                    transmettre pour la</p>
+                            </div>
+                            <div class="flex justify-center pt-2">
+                                <div class="btn bg-green flex justify-between px-8 py-4 text-white items-center">Voir
+                                    les
+                                    Services<img class="pl-3" src="./assets/images/ArrowRight.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider-3 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== slider-end ====== -->
+        <!-- ===================== get-in-touch-section ========================== -->
+        <div class="gettouch-bg py-8">
+            <div class="flex justify-center">
+                <div>
+                    <div>
+                        <h1 class="text-white text-center text-3xl">Get In Touch!</h1>
+                    </div>
+                    <div class="flex pt-5 pl-6 flex-col sm:flex-row">
+                        <div class="flex items-center">
+                            <div>
+                                <img src="./assets/images/Call.png" alt="call">
+                            </div>
+                            <div class=" ml-3">
+                                <p class="text-white hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-white hidden lg:block ml-5">
+                                |
+                            </div>
+                        </div>
+                        <div class="flex items-center sm:ml-5">
+                            <div>
+                                <img src="./assets/images/exclamation.png" alt="call">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-white">On vous rappel?</p>
+                            </div>
+                            <div class="text-white hidden lg:block sm:ml-5">
+                                |
+                            </div>
+                        </div>
+                        <div class="flex items-center sm:ml-5">
+                            <div>
+                                <img src="./assets/images/Message.png" alt="call">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-white">voyer votre demande</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center items-center sm:ml-5">
+                            <dvi>
+                                <div class="care-bg flex items-center justify-center">
+                                    <img width="23px" src="./assets/images/care.png" alt="call">
+                                </div>
+                            </dvi>
+                            <div class="ml-3">
+                                <p class="text-white">Service Apres-vente <br><a class="hover:text-green-700" href="tel:+370 64 82 34 34">+370 64 82 34 34</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="flex">
+                    <div>
+                        <img src="./assets/images/fb.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/insta.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/twiter.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/ball.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/Envato.png" alt="facebook">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= Footer =================== -->
+
+        <footer class="">
+            <div class="flex py-10 justify-center">
+                <div class="flex flex-col md:flex-row px-5 justify-center w-full">
+                    <div>
+                        <div class="flex justify-center sm:justify-start">
+                            <img src="./assets/images/footer-logo.png" alt="logo">
+                        </div>
+                        <div class="pt-5">
+                            <p class="w-full text-center sm:text-left sm:w-3/5 text-gray opacity-70">Lorem Ipsum is
+                                simply dummy text of the printing and
+                                typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center sm:justify-start text-center px-5 py-5">
+
+                        <div class="ml-5">
+                            <div>
+                                <p class="text-left text-white">Pages</p>
+                            </div>
+                            <div class="text-left opacity-60 text-gray mt-5">
+                                <p class="hover:text-orange-500"><a href="./home.html">Home</a></p>
+                                <p class="hover:text-orange-500"><a href="./form.html">Devis</a></p>
+                                <p class="hover:text-orange-500"><a href="./services.html">Services</a></p>
+                                <p class="hover:text-orange-500"><a href="./product.html">Products</a></p>
+                            </div>
+                        </div>
+                        <div class="ml-10">
+                            <div>
+                                <p class="text-white text-left">Pages</p>
+                            </div>
+                            <div class="text-left opacity-60 text-gray mt-5">
+                                <p class="p-0 text-white hover:text-orange-500"><a href="./about.html">Contactez-nous</a></p>
+                                <p class="p-0 text-white  hover:text-orange-500"><a href="./services.html">Service clients</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="footer-bar ">
+
+                </div>
+            </div>
+            <div>
+                <p class="text-center text-white py-4 opacity-70">Copyright © 2022 Montage-Chalet.fr</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,341 @@
+body {
+    font-family: 'klavika';
+}
+
+@font-face {
+    font-family: klavika;
+    src: url(../font-family/Klavika.zip);
+}
+
+/* ========== common-classes =========== */
+
+.text-blue {
+    color: #1E266D;
+}
+
+.text-small {
+    font-size: 8px;
+}
+
+.text-lightblue {
+    color: #203864;
+}
+
+.bg-green {
+    background: #578338;
+}
+
+.text-green {
+    color: #578338;
+}
+
+.text-gray {
+    color: #DFE0EB;
+}
+
+.bg-lightgreen {
+    background: #93D051;
+}
+
+.bg-orange {
+    background: #EC7E39;
+}
+
+.text-orange {
+    color: #EC7E39;
+}
+
+.text-lightblack {
+    color: #021C47;
+}
+
+nav {
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 0px 0px 32px 32px;
+    padding: 10px 20px;
+}
+
+.sec-mt {
+    margin-top: 10rem;
+}
+
+.card {
+    background: #FFFFFF;
+    width: 80%;
+    box-shadow: 15.5558px 24.4448px 57.7786px -13.3335px rgba(127, 127, 127, 0.13);
+    border-radius: 15.5558px;
+}
+
+.btn {
+    box-shadow: 0px 11.1113px 24.4448px rgba(87, 131, 56, 0.15);
+    border-radius: 15.5558px;
+    width: 220px;
+}
+
+.btn-2 {
+    box-shadow: 0px 11.1113px 24.4448px rgba(87, 131, 56, 0.15);
+    border-radius: 15.5558px;
+}
+
+.bottom-up {
+    bottom: -70px;
+}
+
+.icon-bg {
+    padding: 12px 12px;
+    border-radius: 5px 5px 5px 5px;
+    background: rgba(87, 131, 56, 0.1);
+}
+
+.bar {
+    background: #578338;
+    width: 30px;
+    height: 1px;
+}
+
+.bar-2 {
+    background: #D4D4D8;
+    width: 70px;
+    height: 1px;
+}
+
+.service-bg {
+    background: #FFFFFF;
+    box-shadow: 15.5558px 24.4448px 57.7786px -13.3335px rgba(127, 127, 127, 0.13);
+    border-radius: 15.5558px;
+}
+
+.product-bg {
+    border-right: 0.1px dashed #eeeeee;
+    border-top: 0.1px dashed #eeeeee;
+    border-bottom: 0.1px dashed #eeeeee;
+}
+
+.product-img {
+    background-image: url(../images/unsplash-2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+}
+
+.bg-pink {
+    background: rgba(236, 126, 57, 0.1);
+    border: 1px solid #EEEEEE;
+    border-radius: 12px;
+}
+
+.brder {
+    border: 1px solid #eeeeee;
+}
+
+.chose-bg {
+    background: rgba(145, 206, 81, 0.2);
+    border-radius: 83px;
+    height: 200px;
+}
+
+.cmn-h {
+    height: 200px;
+}
+
+.chose-1 {
+    top: -75px;
+}
+
+.chose-3 {
+    top: 150px;
+    right: 68px;
+}
+
+.chose-4 {
+    top: 150px;
+}
+
+.chose-5 {
+    top: -128px;
+    right: 165px;
+}
+
+.chose-6 {
+    top: -43px;
+    right: 165px;
+}
+
+.chose-7 {
+    bottom: 0px;
+    right: 200px;
+}
+
+.red-1 {
+    top: -144px;
+    right: 212px;
+}
+
+.red-2 {
+    top: -80px;
+    left: 0px;
+}
+
+.slider-card {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(7, 4, 146, 0.1), 0px 24px 60px rgba(6, 47, 125, 0.05), 0px 12px 24px rgba(27, 59, 119, 0.05);
+}
+
+.star-bg {
+    background-image: url(../images/star-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gettouch-bg {
+    background-color: #ec7e39;
+    background-image: url(../images/getouch-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.care-bg {
+    background-image: url(../images/care-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 115px;
+    width: 40px;
+}
+
+footer {
+    background: #1F3864;
+}
+
+.footer-bar {
+    background-color: rgba(135, 146, 161, 0.2);
+    width: 450px;
+    height: 1px;
+}
+
+#carouselExampleCaptions button {
+    background: rgba(86, 130, 56, 0.3) !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100% !important;
+    border: none !important;
+}
+
+#carouselExampleCaptions button:enabled {
+    background-color: #EC7E39 !important;
+}
+
+.carousel-indicators {
+    bottom: -10px !important;
+}
+
+.search-border {
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 15.5558px;
+}
+
+.filter {
+    background: rgba(87, 131, 56, 0.2);
+    border-radius: 12px;
+}
+
+.curve {
+    background: rgba(255, 104, 104, 0.1);
+    border-radius: 15.5558px;
+}
+
+.curve-2 {
+    border-radius: 15.5558px;
+}
+
+.map-bg {
+    background-image: url(../images/map.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.carousel_2 {
+    bottom: -40px !important;
+}
+
+/* input custom style */
+.custom-file-input {
+    color: transparent;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: 'Upload file';
+    color: #578338;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+.custom-file-input:hover::before {
+    border-color: black;
+}
+
+.custom-file-input:active {
+    outline: 0;
+}
+
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+/* file-2 */
+.custom-file-input2 {
+    color: transparent;
+}
+
+.custom-file-input2::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input2::before {
+    content: "Drag or Select the file to upload your manufacturers quotation";
+    color: #1B1C57;
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+.custom-file-input:hover2::before {
+    border-color: black;
+}
+
+.custom-file-input2:active {
+    outline: 0;
+}
+
+.custom-file-input2:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}

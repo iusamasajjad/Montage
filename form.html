@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                },
+            }
+        }
+    }
+</script>
+
+<body>
+    <div>
+         <!-- ================ header-section ============== -->
+         <header>
+            <div>
+                <nav class="flex sm:flex hidden md:hidden lg:flex justify-between absolute top-0 right-0 left-0 z-20">
+                    <ul class="flex items-center">
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./form.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/vector.png" alt="vector"></div>
+                                    <div>Devis Montage</div>
+                                </div>
+                            </a></li>
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./services.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/question-mark.png" alt="q-mark"></div>
+                                    <div>Besoin d'aide !</div>
+                                </div>
+                            </a></li>
+                        <li class="text-sm text-blue font-semibold ml-5"><a href="./product.html">
+                                <div class="flex items-center">
+                                    <div class="mr-1"><img src="./assets/images/house.png" alt="house"></div>
+                                    <div>Nos Chalets</div>
+                                </div>
+                            </a></li>
+                    </ul>
+                    <ul>
+                        <li class="flex"><a href="">
+                                <div class="m-0 flex justify-center"><img width="130px" src="./assets/images/logo.png"
+                                        alt=""></div>
+                                <div>
+                                    <p class="text-xs text-lightblue opacity-60 font-semibold">Le spécialiste de la
+                                        construction des chalets en kit</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                    <ul class="flex items-center">
+                        <li class="text-sm text-blue font-semibold mr-5"><a href="./about.html">Contactez-nous</a></li>
+                        <li class="text-sm text-blue font-semibold mr-5"><a id="selected-language" href="">Eng
+                            </a></li>
+
+                        <div class="flex">
+                            <div class="text-sm text-blue font-semibold opacity-60 mr-5">
+                                <p>Consultation</p>
+                                <p class="hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-sm text-blue font-semibold opacity-60 mr-5">
+                                <p>Service clients</p>
+                                <p class="hover:text-green-700"><a href="tel:07 49 08 79 70">07 49 08 79 70</a></p>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- ================ hamburger ===================== -->
+            <div class="hamburger">
+                <nav class="sm:hidden md:block lg:hidden rounded-none absolute top-0 right-0 left-0 z-20">
+                    <ul class="flex justify-between items-center w-full items-center">
+                        <div class="flex">
+                            <div class="text-small text-blue font-light opacity-60 mr-1">
+                                <p>Consultation</p>
+                                <p class="hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-small text-blue font-light opacity-60">
+                                <p>Service clients</p>
+                                <p class="hover:text-green-700"><a href="tel:07 49 08 79 70">07 49 08 79 70</a></p>
+                            </div>
+                        </div>
+                        <li class="flex"><a href="">
+                                <div><img width="80px" src="./assets/images/logo.png" alt=""></div>
+                            </a></li>
+                        <div>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="hidden absolute bg-white py-5 flex text-center justify-center top-12 right-0 left-0"
+                            id="myLinks">
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./form.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/vector.png" alt="vector"></div>
+                                        <div>Devis Montage</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./services.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/question-mark.png" alt="q-mark">
+                                        </div>
+                                        <div>Besoin d'aide !</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./product.html">
+                                    <div class="flex justify-center items-center">
+                                        <div class="mr-1"><img src="./assets/images/house.png" alt="house"></div>
+                                        <div>Nos Chalets</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="about.html">Contactez-nous</a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ================================ form-page ===================================== -->
+
+        <div class="mt-12 pt-12 ">
+            <div class="search-border lg:mx-9 lg:px-12 mx-2 py-3 flex flex-col lg:flex-row justify-between items-center">
+                <div class="text-center leading-3 lg:w-1/3 w-full">
+                    <div>
+                        <div class=" flex justify-center items-center">
+                            <p class="text-blue">Upload your manufacturer’s quotation</p>
+                        </div>
+                        <div class="ml-4 flex justify-center text-center items-center">
+                            <img src="./assets/images/cloud-download.png" alt="download">
+                            <div class="flex w-1/3 md:w-1/6 justify-center text-center">
+                                <input type="file" class="custom-file-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-3 lg:w-1/3 mt-3 lg:mt-0 md-mt-3 w-full flex justify-center">
+                    <div>
+                        <div class=" flex justify-center text-center items-center">
+                            <p class="text-blue text-xs lg:text-sm">Send us manufacturer’s quote to</p>
+                        </div>
+                        <div class="ml-4 flex items-center">
+                            <p class="text-green">contact@montage-chalet.fr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-3 lg:w-1/3 mt-3 lg:mt-0 md-mt-3 w-full flex justify-center lg:justify-end">
+                    <div>
+                        <div class="flex justify-center text-center">
+                            <p class="text-blue w-full">Call us at</p>
+                        </div>
+                        <div class="ml-4 flex justify-center">
+                            <p class="text-orange">07 49 08 79 70</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======================= Contact-form ===================== -->
+        <div class="flex justify-center text-center mt-10 pt-5">
+            <div>
+                <div>
+                    <p class="text-xl font-extrabold text-lightblack">Contact Form </p>
+                </div>
+                <div>
+                    <p class="text-lightblack opacity-60">please enter your details and add the file if you want
+                        anything custom or want to show us something.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex my-5 justify-center">
+            <div class="border rounded px-5 mx-2 py-5 lg:w-4/5 w-full">
+                <div>
+                    <p class="text-blue text-xs lg:text-sm">Subject</p>
+                    <div class="filter py-3 px-3">
+                        <input class="outline-none text-xs lg:text-sm bg-transparent w-full " type="search"
+                            placeholder="The subject will be autofill according to selection">
+                    </div>
+                </div>
+                <div class="flex mt-3 flex-col md:flex-col lg:flex-row">
+                    <div class="lg:w-1/3 w-full md:w-full">
+                        <p class="text-blue text-xs lg:text-sm">Email address for the quote*</p>
+                        <div class="filter py-3 px-3">
+                            <input class="outline-none text-xs lg:text-sm bg-transparent w-full " type="email"
+                                placeholder="muddassarhaseeb34@gmail.com">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 w-full md:w-full mt-2 lg:mt=0 md:mt-0 sm:w-full lg:mx-3">
+                        <p class="text-blue text-xs lg:text-sm">Name for the quotation*</p>
+                        <div class="filter py-3 px-3">
+                            <input class="outline-none bg-transparent w-full text-xs lg:text-sm" type="name"
+                                placeholder="Muddassar Haseeb">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 mt-2 lg:mt=0 md:mt-0 w-full md:w-full sm:full">
+                        <p class="text-blue text-xs lg:text-sm">Phone Number*</p>
+                        <div class="filter py-3 px-3">
+                            <input class="outline-none bg-transparent w-full text-xs lg:text-sm" type="number"
+                                placeholder="+92 346 6955119">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p class="text-blue text-xs lg:text-sm">Description</p>
+                    <div class="filter py-3 px-3">
+                        <textarea class="outline-none text-xs lg:text-sm w-full bg-transparent" rows="6" name="comment"
+                            placeholder="Enter any description about the product..." form="usrform"></textarea>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p class="text-blue">Manufacturer's quotation</p>
+                    <div class="flex justify-center border py-3 px-3">
+                        <input type="file" class="custom-file-input2">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p class="text-blue">Optional quotation</p>
+                    <div class="rounded text-white text-center bg-orange py-3 px-3">
+                        <p>Get a quote for your product assembly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================== Assembly form ======================== -->
+
+        <div class="flex justify-center text-center mt-10 pt-5">
+            <div>
+                <div>
+                    <p class="text-xl font-extrabold text-lightblack">Assembly Line Form</p>
+                </div>
+                <div>
+                    <p class="text-lightblack opacity-60">Please select the features those you need?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mx-2">
+            <div class="lg:w-4/5 md:w-full w-full my-5">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="border bg-transparent mt-1 filter mr-3">
+                        <p class="text-blue px-3 py-3">Montage hors d'eau hors d'air</p>
+                    </div>
+                    <div class="border bg-transparent mt-1 mr-3 filter">
+                        <p class="text-blue px-3 py-3">Montage hors d'eau hors d'air</p>
+                    </div>
+                    <div class="border bg-transparent mt-1 mr-3 filter">
+                        <p class="text-blue px-3 py-3"><span class="text-blue font-bold">Idem + cle en main : </span>
+                            Fondations, Montage, Plomberie, electricite, traitement eventuel</p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row md:flex-col items-center mt-3">
+                    <div>
+                        <p class="text-blue font-bold mr-3">Manufacturer:</p>
+                    </div>
+                    <div class="flex flex-col w-full lg:w-11/12 md:w-full lg:flex-row mr-3">
+                        <div class="border mt-1 bg-orange mr-3 curve-2">
+                            <p class="text-white px-3 py-3">Chalet de Jardin</p>
+                        </div>
+                        <div class="border mt-1 curve-2 mr-3">
+                            <p class="text-green px-3 py-3">Chalet Pro</p>
+                        </div>
+                        <div class="border mt-1 curve-2 mr-3">
+                            <p class="text-orange px-3 py-3">Maestro Chalet</p>
+                        </div>
+                        <div class="border mt-1 curve-2 mr-3">
+                            <p class="text-orange px-3 py-3">Pro Modum</p>
+                        </div>
+                        <div class="border mt-1 curve-2 mr-3">
+                            <p class="text-blue px-3 py-3">Chalet Bios Autonome</p>
+                        </div>
+                        <div class="border mt-1 curve-2 mr-3">
+                            <p class="text-blue px-3 py-3">Others</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row md:flex-col mt-3 items-center">
+                    <div>
+                        <p class="text-blue font-bold mr-3">Product Type :</p>
+                    </div>
+                    <div class="flex flex-col md:flex-col lg:flex-row justify-between w-4/5">
+                        <div class="border bg-orange curve-2 lg:mr-3 lg:w-1/2">
+                            <p class="text-white px-3 py-3 text-center">Customized Product</p>
+                        </div>
+                        <div class="border curve-2 mt-2 lg:mt-0 lg:w-1/2">
+                            <p class="text-green text-center px-3 py-3">Product Reference</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div>
+                        <p class="text-blue font-bold mr-3">Product Type :</p>
+                    </div>
+                    <div class="border filter lg:mr-3 w-full lg:w-1/3">
+                        <p class="text-blue text-center opacity-60 px-3 py-3">Upload or select your drawing to upload
+                        </p>
+                    </div>
+                    <div class="border bg-orange curve-2 w-full mt-2 md:mt-2 lg:mt-0 lg:w-1/3">
+                        <p class="text-white px-3 py-3 text-center">No drawing</p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row md:flex-col mt-3 items-center">
+                    <div>
+                        <p class="text-blue font-bold mr-5">Sugsesions :</p>
+                    </div>
+                    <div class="border w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
+                        <p class="text-blue px-3 py-3">Foundation area</p>
+                    </div>
+                    <div class="border w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
+                        <p class="text-blue px-3 py-3">Number of rooms on ground floor</p>
+                    </div>
+                    <div class="border w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
+                        <p class="text-blue px-3 py-3">Number of rooms on 1st floor</p>
+                    </div>
+                    <div class="border w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
+                        <p class="text-blue px-3 py-3">Surface area 1st floor</p>
+                    </div>
+                    <div class="border bg-orange w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
+                        <p class="text-white px-3 py-3">Type of roofing</p>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full lg:flex-row lg:mt-3 mt-1 md:mt-3 lg:ml-12 items-center">
+
+                    <div class="border w-full md:w-full lg:w-fit curve lg:ml-12 lg:mr-3 flex items-center">
+                        <p class="text-orange px-3 py-3">Roof Surface</p>
+                        <p class="text-blue px-3 text-sm py-3">(30m )</p>
+                    </div>
+                    <div class="border w-full md:w-full lg:w-fit curve-2 mt-1 lg:mr-3">
+                        <p class="text-blue px-3 py-3">Number of windows and Doors</p>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div>
+                        <p class="text-blue mr-3 font-bold">Type of roofing :</p>
+                    </div>
+                    <div class="border curve-2 w-full md:w-full lg:w-fit lg:mr-3 flex mt-2 justify-center items-center">
+                        <img class="pl-2" src="./assets/images/watercolor-1.png" alt="water">
+                        <p class="text-blue px-3 text-sm py-3">1 panel</p>
+                    </div>
+                    <div class="border curve-2 w-full md:w-full lg:w-fit lg:mr-3 flex mt-2 justify-center bg-orange flex items-center">
+                        <img class="pl-2" src="./assets/images/watercolor-1.png" alt="water">
+                        <p class="text-white px-3 text-sm py-3">2 panel</p>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-5 items-center">
+
+                    <div class="border curve mr-3 flex items-center">
+                        <p class="text-orange px-8 py-3">Previous</p>
+                    </div>
+                    <div class="border bg-orange curve-2">
+                        <p class="text-white px-8 py-3">Next</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="footer-bar ">
+
+            </div>
+        </div>
+
+        <!-- ======================== select form ======================== -->
+
+        <div class="flex justify-center text-center mt-5">
+            <div>
+                <div>
+                    <p class="text-xl font-extrabold text-lightblack">Selection Form</p>
+                </div>
+                <div>
+                    <p class="text-lightblack opacity-60">Please select from the selectors as per need and we will
+                        calculate our best quote for your product.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="border mx-1 curve-2 w-full md:w-4/5 lg:w-4/5 my-4">
+                <div class="flex justify-center py-3">
+                    <p class="text-orange text-sm">Wall thinkness</p>
+                </div>
+                <div class="flex flex-col lg:flex-row pb-3">
+                    <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-blue px-3 text-sm py-3">44 / 45 mm</p>
+                    </div>
+                    <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-blue px-3 text-sm py-3">57 / 58 mm</p>
+                    </div>
+                    <div class="border lg:w-1/3 mt-1 bg-orange mx-2 curve-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-white px-3 text-sm py-3">44 / 45 mm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="border curve-2 w-4/5 my-4">
+                <div class="flex justify-center py-3">
+                    <p class="text-blue text-sm">Type of exterior walls</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="border curve-2 w-full lg:w-4/5 md:w-4/5 mx-1 my-4">
+                <div class="flex justify-center py-3">
+                    <p class="text-orange text-sm">Insulation type</p>
+                </div>
+                <div class="flex pb-3">
+                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">Ceiling</p>
+                    </div>
+                    <div class="border bg-orange w-1/3 curve-2 flex justify-center items-center">
+                        <p class="text-white px-3 text-sm py-3">Walls</p>
+                    </div>
+                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">Floor</p>
+                    </div>
+                </div>
+                <div class="flex pb-3">
+                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">RE2020</p>
+                    </div>
+                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">Simple</p>
+                    </div>
+                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">Sans isolation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="border curve-2 w-4/5 my-2">
+                <div class="flex justify-center py-3">
+                    <p class="text-blue text-sm">Roofing</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="border curve-2 w-4/5 my-2">
+                <div class="flex justify-center py-3">
+                    <p class="text-blue text-sm">Wood protection (sprayable) Paint</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="border curve-2 w-4/5 my-2">
+                <div class="flex justify-center py-3">
+                    <p class="text-blue text-sm">Terrace, Covered terrace</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="border curve-2 w-4/5 my-2">
+                <div class="flex justify-center py-3">
+                    <p class="text-blue text-sm">Type of foundation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================== Location of construction  ======================== -->
+
+        <div class="flex justify-center text-center mt-5">
+            <div>
+                <div>
+                    <p class="text-xl font-extrabold text-lightblack">Location of construction </p>
+                </div>
+                <div>
+                    <p class="text-lightblack opacity-60">Please select and enter the city with zipcode of
+                        constructional location.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="w-4/5 my-2">
+                <div class="flex flex-col md:flex-col lg:flex-row mt-3">
+                    <div class="lg:w-4/5 lg:mx-5 mt-2">
+                        <p class="text-blue text-xs lg:text-sm">City :</p>
+                        <div class="filter py-3 px-3">
+                            <select class="outline-none bg-transparent w-full lg:text-sm text-xs" id="city" name="city">
+                                <option value="">Select or type city name</option>
+                                <option value="Islamabad">Islamabad</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="lg:w-1/6 mt-2">
+                        <p class="text-blue text-xs lg:text-sm">Zip code :</p>
+                        <div class="filter py-3 px-3">
+                            <input class="outline-none bg-transparent w-full text-xs lg:text-sm" type="number"
+                                placeholder="56130">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="border curve-2 lg:w-4/5 w-full mx-3 my-4">
+                <div class="flex justify-center py-3">
+                    <p class="text-blue text-xs">Site access conditions</p>
+                </div>
+                <div class="flex flex-col lg:flex-row pb-3">
+                    <div class="border bg-orange lg:w-1/3 w-full curve-2 lg:mx-2 flex justify-center items-center">
+                        <p class="text-white px-3 text-sm py-3">Cottage kit within 15m, vehicle ok</p>
+                    </div>
+                    <div class=" lg:w-1/3 w-full curve-2 lg:mx-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">Less than 100m or no access for vehicles</p>
+                    </div>
+                    <div class="border lg:w-1/3 w-full curve-2 lg:mx-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">Other to described</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-5">
+            <button class="btn bg-green flex justify-between px-8 py-4 text-white items-center">Get a Quote<img
+                    class="pl-3" src="./assets/images/ArrowRight.png" alt=""></button>
+        </div>
+
+        <!-- ===================== get-in-touch-section ========================== -->
+        <div class="gettouch-bg py-8">
+            <div class="flex justify-center">
+                <div>
+                    <div>
+                        <h1 class="text-white text-center text-3xl">Get In Touch!</h1>
+                    </div>
+                    <div class="flex pt-5 pl-6 flex-col sm:flex-row">
+                        <div class="flex items-center">
+                            <div>
+                                <img src="./assets/images/Call.png" alt="call">
+                            </div>
+                            <div class=" ml-3">
+                                <p class="text-white hover:text-green-700"><a href="tel:06 48 09 04 42">06 48 09 04 42</a></p>
+                            </div>
+                            <div class="text-white hidden lg:block ml-5">
+                                |
+                            </div>
+                        </div>
+                        <div class="flex items-center sm:ml-5">
+                            <div>
+                                <img src="./assets/images/exclamation.png" alt="call">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-white">On vous rappel?</p>
+                            </div>
+                            <div class="text-white hidden lg:block sm:ml-5">
+                                |
+                            </div>
+                        </div>
+                        <div class="flex items-center sm:ml-5">
+                            <div>
+                                <img src="./assets/images/Message.png" alt="call">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-white">voyer votre demande</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center items-center sm:ml-5">
+                            <dvi>
+                                <div class="care-bg flex items-center justify-center">
+                                    <img width="23px" src="./assets/images/care.png" alt="call">
+                                </div>
+                            </dvi>
+                            <div class="ml-3">
+                                <p class="text-white">Service Apres-vente <br><a class="hover:text-green-700" href="tel:+370 64 82 34 34">+370 64 82 34 34</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="flex">
+                    <div>
+                        <img src="./assets/images/fb.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/insta.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/twiter.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/ball.png" alt="facebook">
+                    </div>
+                    <div class="ml-6">
+                        <img src="./assets/images/Envato.png" alt="facebook">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= Footer =================== -->
+
+        <footer class="">
+            <div class="flex py-10 justify-center">
+                <div class="flex flex-col md:flex-row px-5 justify-center w-full">
+                    <div>
+                        <div class="flex justify-center sm:justify-start">
+                            <img src="./assets/images/footer-logo.png" alt="logo">
+                        </div>
+                        <div class="pt-5">
+                            <p class="w-full text-center sm:text-left sm:w-3/5 text-gray opacity-70">Lorem Ipsum is
+                                simply dummy text of the printing and
+                                typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center sm:justify-start text-center px-5 py-5">
+
+                        <div class="ml-5">
+                            <div>
+                                <p class="text-left text-white">Pages</p>
+                            </div>
+                            <div class="text-left opacity-60 text-gray mt-5">
+                                <p class="hover:text-orange-500"><a href="./home.html">Home</a></p>
+                                <p class="hover:text-orange-500"><a href="./form.html">Devis</a></p>
+                                <p class="hover:text-orange-500"><a href="./services.html">Services</a></p>
+                                <p class="hover:text-orange-500"><a href="./product.html">Products</a></p>
+                            </div>
+                        </div>
+                        <div class="ml-10">
+                            <div>
+                                <p class="text-white text-left">Pages</p>
+                            </div>
+                            <div class="text-left opacity-60 text-gray mt-5">
+                                <p class="p-0 text-white hover:text-orange-500"><a href="./about.html">Contactez-nous</a></p>
+                                <p class="p-0 text-white  hover:text-orange-500"><a href="./services.html">Service clients</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="footer-bar ">
+
+                </div>
+            </div>
+            <div>
+                <p class="text-center text-white py-4 opacity-70">Copyright © 2022 Montage-Chalet.fr</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+</script>
+
+</html>
