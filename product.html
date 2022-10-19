@@ -32,23 +32,20 @@
          <!-- ================ header-section ============== -->
          <header>
             <div>
-                <nav class="flex sm:flex hidden md:hidden lg:flex justify-between absolute top-0 right-0 left-0 z-20">
+                <nav class="flex  hidden md:hidden sm:hidden lg:flex justify-between absolute top-0 right-0 left-0 z-20">
                     <ul class="flex items-center">
                         <li class="text-sm text-blue font-semibold ml-5"><a href="./form.html">
                                 <div class="flex items-center">
-                                    <div class="mr-1"><img src="./assets/images/vector.png" alt="vector"></div>
                                     <div>Devis Montage</div>
                                 </div>
                             </a></li>
                         <li class="text-sm text-blue font-semibold ml-5"><a href="./services.html">
                                 <div class="flex items-center">
-                                    <div class="mr-1"><img src="./assets/images/question-mark.png" alt="q-mark"></div>
                                     <div>Besoin d'aide !</div>
                                 </div>
                             </a></li>
                         <li class="text-sm text-green font-bold ml-5"><a href="./product.html">
                                 <div class="flex items-center">
-                                    <div class="mr-1"><img src="./assets/images/house.png" alt="house"></div>
                                     <div>Nos Chalets</div>
                                 </div>
                             </a></li>
@@ -84,7 +81,7 @@
 
             <!-- ================ hamburger ===================== -->
             <div class="hamburger">
-                <nav class="sm:hidden md:block lg:hidden rounded-none absolute top-0 right-0 left-0 z-20">
+                <nav class="sm:block md:block lg:hidden rounded-none absolute top-0 right-0 left-0 z-20">
                     <ul class="flex justify-between items-center w-full items-center">
                         <div class="flex">
                             <div class="text-small text-blue font-light opacity-60 mr-1">
@@ -108,20 +105,17 @@
                             id="myLinks">
                             <li class="text-sm text-blue font-semibold mt-3"><a href="./form.html">
                                     <div class="flex justify-center items-center">
-                                        <div class="mr-1"><img src="./assets/images/vector.png" alt="vector"></div>
                                         <div>Devis Montage</div>
                                     </div>
                                 </a></li>
                             <li class="text-sm text-blue font-semibold mt-3"><a href="./services.html">
                                     <div class="flex justify-center items-center">
-                                        <div class="mr-1"><img src="./assets/images/question-mark.png" alt="q-mark">
-                                        </div>
+                                        
                                         <div>Besoin d'aide !</div>
                                     </div>
                                 </a></li>
                             <li class="text-sm text-blue font-semibold mt-3"><a href="./product.html">
                                     <div class="flex justify-center items-center">
-                                        <div class="mr-1"><img src="./assets/images/house.png" alt="house"></div>
                                         <div>Nos Chalets</div>
                                     </div>
                                 </a></li>
@@ -175,21 +169,21 @@
                     <div>
                         <div class="flex items-center mt-4">
                             <input id="default-checkbox" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                class="w-4 h-4 ">
                             <label for="default-checkbox"
                                 class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Habitation >
                                 50m²</label>
                         </div>
                         <div class="flex items-center mt-4">
                             <input checked id="checked-checkbox" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                class="w-4 h-4">
                             <label for="checked-checkbox"
                                 class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Habitation <
                                     50m²</label>
                         </div>
                         <div class="flex items-center mt-4">
                             <input checked id="checked-checkbox" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                class="w-4 h-4 ">
                             <label for="checked-checkbox"
                                 class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Abris</label>
                         </div>
@@ -212,7 +206,7 @@
                 </div>
                 <div class="mt-4">
                     <div>
-                        <img src="./assets/images/parkar.png" alt="splash">
+                        <img class="w-full" src="./assets/images/parkar.png" alt="splash">
                     </div>
                     <div class="px-4 py-3 product-bg w-full">
                         <div class="text-center">
@@ -440,7 +434,8 @@
             </div>
         </div>
 
-        <div class="flex justify-center text-center mt-10 pt-5">
+         <!-- =============================== about-us =========================== -->
+         <div class="flex relative  justify-center text-center mt-12 pt-12">
             <div>
                 <div class="bar m-auto"></div>
                 <div>
@@ -450,6 +445,7 @@
                     <p class="text-xl font-extrabold text-lightblack">What Our User Say About Us</p>
                 </div>
             </div>
+            <div class="carousel-bg hidden lg:block md:hidden absolute"></div>
         </div>
        </div>
 
