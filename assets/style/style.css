@@ -36,6 +36,9 @@ body {
 .bg-lightgreen {
     background: #93D051;
 }
+.text-darkgreen{
+    color: #93D051;
+}
 
 .bg-orange {
     background: #EC7E39;
@@ -360,4 +363,7 @@ input[type=checkbox] {
 
 .custom-file-input2:active::before {
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.mystyle{
+    display: block !important;
 }

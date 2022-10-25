@@ -48,7 +48,7 @@
                             </a></li>
                             <li class="lg:text-lg text-sm md:text-sm sm:text-sm text-green font-semibold ml-5"><a href="./form.html">
                                 <div class="flex items-center">
-                                    <div>Devis Montage</div>
+                                    <div>Devis</div>
                                 </div>
                             </a></li>
                     </ul>
@@ -105,20 +105,20 @@
                         </div>
                         <div class="hidden absolute bg-white py-5 flex text-center justify-center top-12 right-0 left-0"
                             id="myLinks">
-                            <li class="text-sm text-blue font-semibold mt-3"><a href="./form.html">
-                                    <div class="flex justify-center items-center">
-                                        <div>Devis Montage</div>
-                                    </div>
-                                </a></li>
                             <li class="text-sm text-blue font-semibold mt-3"><a href="./services.html">
                                     <div class="flex justify-center items-center">
-                                        
-                                        <div>Besoin d'aide !</div>
+                                        <div>Services</div>
                                     </div>
                                 </a></li>
                             <li class="text-sm text-blue font-semibold mt-3"><a href="./product.html">
                                     <div class="flex justify-center items-center">
-                                        <div>Nos Chalets</div>
+                                        
+                                        <div>Products</div>
+                                    </div>
+                                </a></li>
+                            <li class="text-sm text-blue font-semibold mt-3"><a href="./form.html">
+                                    <div class="flex justify-center items-center">
+                                        <div>Devis</div>
                                     </div>
                                 </a></li>
                             <li class="text-sm text-blue font-semibold mt-3"><a href="about.html">Contactez-nous</a>
@@ -134,46 +134,25 @@
                 
         <!-- ================================ form-page ===================================== -->
 
-        <div  class="mt-12 pt-12 ">
-            <div class="search-border lg:mx-9 lg:px-12 mx-2 py-3 flex flex-col lg:flex-row justify-between items-center">
-                <div class="text-center leading-3 lg:w-1/3 w-full">
+        <div  class="mt-12 pt-12 flex justify-center">
+            <div class="search-border w-2/3  mx-2 py-3 flex flex-col lg:flex-row justify-between items-center">
+                <div class="ml-3 mt-3 px-3 lg:mt-0 md-mt-3  flex justify-center">
                     <div>
-                        <div class=" flex justify-center items-center">
-                            <p class="text-blue">Upload your manufacturer’s quotation</p>
+                        <div class=" flex justify-start items-center">
+                            <p class="text-blue text-xs lg:text-lg">Send us manufacturer’s quote to</p>
                         </div>
-                        <div class="ml-4 mt-3 flex justify-center text-center items-center">
-                           <div>
-                            <a >
-                                <img  src="./assets/images/cloud-download.png" alt="download">
-                            </a>
-                           </div>
-                            
-                            <div>
-                                <a href="javascript:void();"  onclick= "Open()"  class="flex  justify-center text-center">
-                                    <!-- <input type="file" class="custom-file-input"> -->
-                                    <p class="text-green hover:text-green-600 cursor-pointer ml-3">upload file</p>
-                                </a>
-                            </div>
+                        <div>
+                            <p class="text-darkgreen">contact@montage-chalet.fr</p>
                         </div>
                     </div>
                 </div>
-                <div class="ml-3 lg:w-1/3 mt-3 lg:mt-0 md-mt-3 w-full flex justify-center">
+                <div class="ml-3 mt-3 px-3 lg:mt-0 md-mt-3 flex justify-center lg:justify-end">
                     <div>
-                        <div class=" flex justify-center text-center items-center">
-                            <p class="text-blue text-xs lg:text-sm">Send us manufacturer’s quote to</p>
-                        </div>
-                        <div class="ml-4 flex items-center">
-                            <p class="text-green">contact@montage-chalet.fr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="ml-3 lg:w-1/3 mt-3 lg:mt-0 md-mt-3 w-full flex justify-center lg:justify-end">
-                    <div>
-                        <div class="flex justify-center text-center">
+                        <div class="flex justify-center text-end">
                             <p class="text-blue w-full">Call us at</p>
                         </div>
                         <div class="ml-4 flex justify-center">
-                            <p class="text-orange">07 49 08 79 70</p>
+                            <p class="text-orange hover:text-green-700"><a href="tel:07 49 08 79 70">07 49 08 79 70</a> </p>
                         </div>
                     </div>
                 </div>
@@ -182,7 +161,7 @@
        
         
             <!-- ======================= Contact-form ===================== -->
-            <div class="hidden" id="form">
+            
         <div class="flex justify-center text-center mt-10 pt-5">
             <div>
                 <div>
@@ -237,20 +216,23 @@
                 <div class="mt-3">
                     <p class="text-blue">Manufacturer's quotation</p>
                     <div class="flex justify-center border py-3 px-3">
-                        <input type="file" class="custom-file-input2">
+                        <input type="file" class="custom-file-input2 w-2/5">
                     </div>
                 </div>
                 <div class="mt-3">
                     <p class="text-blue">Optional quotation</p>
-                    <div class="rounded text-white text-center bg-orange py-3 px-3">
-                        <p>Get a quote for your product assembly</p>
-                    </div>
+                    <button href="javascript:void(0);" id="tog"  onclick="myToggle()" class="rounded relative flex justify-center items-center text-green w-full text-center filter py-3 px-3">
+                        Get a quote for your product assembly
+                        <div id="tex" class="absolute right-2 top-2 bottom-0 text-end w-full">
+                            <p>Not activated</p>
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
 
         <!-- ======================== Assembly form ======================== -->
-
+        <div class="hidden" id="myDiv">
         <div class="flex justify-center text-center mt-10 pt-5">
             <div>
                 <div>
@@ -316,7 +298,7 @@
                 </div>
                 <div class="flex flex-col md:flex-col lg:flex-row mt-3 items-center">
                     <div>
-                        <p class="text-blue font-bold mr-3">Product Type :</p>
+                        <p class="text-blue font-bold mr-3">Customs :</p>
                     </div>
                     <div class="border filter lg:mr-3 w-full lg:w-1/3">
                         <p class="text-blue text-center opacity-60 px-3 py-3">Upload or select your drawing to upload
@@ -326,47 +308,165 @@
                         <p class="text-white px-3 py-3 text-center">No drawing</p>
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row md:flex-col mt-3 items-center">
-                    <div>
-                        <p class="text-blue font-bold mr-5">Sugsesions :</p>
+                <div class="flex justify-between flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div class="lg:w-2/12 sm:w-full md:w-ful ">
+                        <p class="text-blue font-bold mr-3">Foundation Area:</p>
                     </div>
-                    <div class="border w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
-                        <p class="text-blue text-sm px-3 py-3">Foundation area</p>
-                    </div>
-                    <div class="border w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
-                        <p class="text-blue text-sm px-3 py-3">Number of rooms on ground floor</p>
-                    </div>
-                    <div class="border w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
-                        <p class="text-blue text-sm px-3 py-3">Number of rooms on 1st floor</p>
-                    </div>
-                    <div class="border w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
-                        <p class="text-blue text-sm px-3 py-3">Surface area 1st floor</p>
-                    </div>
-                    <div class="border bg-orange w-full md:w-full lg:w-fit mt-1 curve-2 lg:mr-3">
-                        <p class="text-white text-sm px-3 py-3">Type of roofing</p>
+                    <div class="flex flex-col lg:flex-row md:flex-col sm:flex-col justify-between  lg:w-9/12">
+                        <div class="flex lg:w-1/3 lg:justify-end justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Length:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="143">
+                                <p class="text-blue">mm</p>
+                        </div>
+                        </div>
+                        <div class="flex lg:w-1/3 mt-3 lg:mt-0 lg:justify-end justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Width:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 curve-2 flex justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="123">
+                                <p class="text-blue">mm</p>
+                        </div>
+                        </div>
+                        <div class="flex items-center">
+                            <p>=</p>
+                        </div>
+                        <div class="flex ml-2 lg:w-1/3 lg:justify-center justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Surface:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 curve-2 flex justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="118">
+                                <p class="text-blue">m<sup>2</sup></p>
+                        </div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col w-full lg:flex-row lg:mt-3 mt-1 md:mt-3 lg:ml-12 items-center">
-
-                    <div class="border w-full md:w-full lg:w-fit curve lg:ml-12 lg:mr-3 flex items-center">
-                        <p class="text-orange px-3 py-3">Roof Surface</p>
-                        <p class="text-blue px-3 text-sm py-3">(30m )</p>
+                <div class="flex justify-between flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div class="1/3">
+                        <p class="text-blue font-bold mr-3">Number of Rooms on Ground Floor:</p>
                     </div>
-                    <div class="border w-full md:w-full lg:w-fit curve-2 mt-1 lg:mr-3">
-                        <p class="text-blue px-3 py-3">Number of windows and Doors</p>
+                    <div class="flex w-2/4 justify-center">
+                        <form class="border mx-1 w-full curve-2 flex justify-between py-2 px-2">
+                            <input id="quantity" name="quantity" class="outline-none bg-whit ml-3 font-bold w-full text-xs lg:text-sm" type="number"
+                                placeholder="1">
+                        </form>
                     </div>
                 </div>
-                <div class="flex w-full flex-col md:flex-col lg:flex-row mt-3 items-center">
+                <div class="flex justify-between flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div class="1/3">
+                        <p class="text-blue font-bold mr-3">Number of Rooms on 1st Floor:</p>
+                    </div>
+                    <div class="flex w-2/4 justify-center">
+                        <form class="border mx-1 w-full curve-2 flex justify-between py-2 px-2">
+                            <input id="quantity" name="quantity" class="outline-none bg-whit ml-3 font-bold w-full text-xs lg:text-sm" type="number"
+                                placeholder="14">
+                        </form>
+                    </div>
+                </div>
+                <div class="flex justify-between flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div class="lg:w-2/12 sm:w-full md:w-ful ">
+                        <p class="text-blue font-bold mr-3">Surface area 1st floor</p>
+                    </div>
+                    <div class="flex flex-col lg:flex-row md:flex-col sm:flex-col justify-between  lg:w-9/12">
+                        <div class="flex lg:w-1/3 lg:justify-end justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Length:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="143">
+                                <p class="text-blue">mm</p>
+                        </div>
+                        </div>
+                        <div class="flex lg:w-1/3 mt-3 lg:mt-0 lg:justify-end justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Width:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 curve-2 flex justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="123">
+                                <p class="text-blue">mm</p>
+                        </div>
+                        </div>
+                        <div class="flex items-center">
+                            <p>=</p>
+                        </div>
+                        <div class="flex ml-2 lg:w-1/3 lg:justify-center justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Surface:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 curve-2 flex justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="118">
+                                <p class="text-blue">m<sup>2</sup></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col justify-between md:flex-col lg:flex-row mt-3 items-center">
                     <div>
                         <p class="text-blue mr-3 font-bold">Type of roofing :</p>
                     </div>
-                    <div class="border curve-2 w-full md:w-full lg:w-fit lg:mr-3 flex mt-2 justify-center items-center">
-                        <img class="pl-2" src="./assets/images/watercolor-1.png" alt="water">
-                        <p class="text-blue px-3 text-sm py-3">1 panel</p>
+                    <div class="flex">
+                        <div class="border curve-2 w-full md:w-full lg:w-fit lg:mr-3 flex mt-2 justify-center items-center">
+                            <img class="pl-2" src="./assets/images/watercolor-1.png" alt="water">
+                            <p class="text-blue px-3 text-sm py-3">1 panel</p>
+                        </div>
+                        <div class="border curve-2 w-full md:w-full lg:w-fit lg:mr-3 flex mt-2 justify-center bg-orange flex items-center">
+                            <img class="pl-2" src="./assets/images/watercolor-1.png" alt="water">
+                            <p class="text-white px-3 text-sm py-3">2 panel</p>
+                        </div>
                     </div>
-                    <div class="border curve-2 w-full md:w-full lg:w-fit lg:mr-3 flex mt-2 justify-center bg-orange flex items-center">
-                        <img class="pl-2" src="./assets/images/watercolor-1.png" alt="water">
-                        <p class="text-white px-3 text-sm py-3">2 panel</p>
+                </div>
+                <div class="flex justify-between flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div class="lg:w-2/12 sm:w-full md:w-ful ">
+                        <p class="text-blue font-bold mr-3">Foundation Area:</p>
+                    </div>
+                    <div class="flex flex-col lg:flex-row md:flex-col sm:flex-col justify-between  lg:w-9/12">
+                        <div class="flex lg:w-1/3 lg:justify-end justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Length:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="143">
+                                <p class="text-blue">mm</p>
+                        </div>
+                        </div>
+                        <div class="flex lg:w-1/3 mt-3 lg:mt-0 lg:justify-end justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Width:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 curve-2 flex justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="123">
+                                <p class="text-blue">mm</p>
+                        </div>
+                        </div>
+                        <div class="flex items-center">
+                            <p>=</p>
+                        </div>
+                        <div class="flex ml-2 lg:w-1/3 lg:justify-center justify-center items-center">
+                            <p class="text-blue font-bold mr-1">Surface:</p>
+                        <div class="border mx-1 curve-2 flex w-2/5 curve-2 flex justify-between py-2 px-2">
+                            <input class="outline-none bg-white w-full text-xs lg:text-sm" type="number"
+                                placeholder="118">
+                                <p class="text-blue">m<sup>2</sup></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div class="1/3">
+                        <p class="text-blue font-bold mr-3">Number of Rooms on Ground Floor:</p>
+                    </div>
+                    <div class="flex w-2/4 justify-center">
+                        <form class="border mx-1 w-full curve-2 flex justify-between py-2 px-2">
+                            <input id="quantity" name="quantity" class="outline-none bg-whit ml-3 font-bold w-full text-xs lg:text-sm" type="number"
+                                placeholder="1">
+                        </form>
+                    </div>
+                </div>
+                <div class="flex justify-between flex-col md:flex-col lg:flex-row mt-3 items-center">
+                    <div class="1/3">
+                        <p class="text-blue font-bold mr-3">Number of Rooms on 1st Floor:</p>
+                    </div>
+                    <div class="flex w-2/4 justify-center">
+                        <form class="border mx-1 w-full curve-2 flex justify-between py-2 px-2">
+                            <input id="quantity" name="quantity" class="outline-none bg-whit ml-3 font-bold w-full text-xs lg:text-sm" type="number"
+                                placeholder="14">
+                        </form>
                     </div>
                 </div>
                 <div class="flex justify-center mt-5 items-center">
@@ -649,9 +749,9 @@
                             </div>
                             <div class="text-left opacity-60 text-gray mt-5">
                                 <p class="hover:text-orange-500"><a href="./home.html">Home</a></p>
-                                <p class="hover:text-orange-500"><a href="./form.html">Devis</a></p>
                                 <p class="hover:text-orange-500"><a href="./services.html">Services</a></p>
                                 <p class="hover:text-orange-500"><a href="./product.html">Products</a></p>
+                                <p class="hover:text-orange-500"><a href="./form.html">Devis</a></p>
                             </div>
                         </div>
                         <div class="ml-10">
@@ -696,7 +796,31 @@
             x.style.display = "block";
         }
     }
-
+    function myToggle() {
+  var element = document.getElementById("myDiv");
+//   element.classList.toggle("mystyle");
+  if(element.style.display === "none")
+  {
+    element.style.display= "block";
+  }else {
+            element.style.display = "block";
+        }
+  var x= document.getElementById("tog");
+  if(x.style.background === "rgba(87, 131, 56, 0.2)"){
+    x.style.background ="rgba(87, 131, 56, 0.2)";
+    x.style.color = "text-green";
+  }else{
+    x.style.background ="#EC7E39";
+    x.style.color = "#fff";
+    
+  }
+  var v = document.getElementById("tex");
+  if (v.innerHTML === "Not activated") {
+    v.innerHTML = "activated";
+  } else {
+    v.innerHTML = "activated";
+  }
+}
 </script>
 
 </html>
