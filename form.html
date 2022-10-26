@@ -262,25 +262,16 @@
                     <div>
                         <p class="text-blue font-bold mr-3">Manufacturer:</p>
                     </div>
-                    <div class="flex flex-col w-full lg:w-11/12 md:w-full lg:flex-row mr-3">
-                        <div class="border mt-1 bg-orange mr-3 curve-2">
-                            <p class="text-white px-3 py-3">Chalet de Jardin</p>
-                        </div>
-                        <div class="border mt-1 curve-2 mr-3">
-                            <p class="text-green px-3 py-3">Chalet Pro</p>
-                        </div>
-                        <div class="border mt-1 curve-2 mr-3">
-                            <p class="text-orange px-3 py-3">Maestro Chalet</p>
-                        </div>
-                        <div class="border mt-1 curve-2 mr-3">
-                            <p class="text-orange px-3 py-3">Pro Modum</p>
-                        </div>
-                        <div class="border mt-1 curve-2 mr-3">
-                            <p class="text-blue px-3 py-3">Chalet Bios Autonome</p>
-                        </div>
-                        <div class="border mt-1 curve-2 mr-3">
-                            <p class="text-blue px-3 py-3">Others</p>
-                        </div>
+                    <div class="filter w-full py-3 px-3">
+                        <select class="outline-none bg-transparent w-full lg:text-sm text-xs" id="city" name="city">
+                            <option value="">Type and Select Manufacturer Companie</option>
+                            <option value="Islamabad">Chalet de Jardin</option>
+                            <option value="Islamabad">Chalet Pro</option>
+                            <option value="Islamabad">Maestro Chalet</option>
+                            <option value="Islamabad">Pro Modum</option>
+                            <option value="Islamabad">Chalet Bios Autonome</option>
+                            <option value="Islamabad">Others</option>
+                        </select>
                     </div>
                 </div>
                 <div class="flex flex-col lg:flex-row md:flex-col mt-3 items-center">
@@ -503,7 +494,7 @@
         <div class="flex justify-center">
             <div class="border mx-1 curve-2 w-full md:w-4/5 lg:w-4/5 my-4">
                 <div class="flex justify-center py-3">
-                    <p class="text-orange text-sm">Wall thinkness</p>
+                    <p class="text-blue font-extrabold text-sm">Wall thinkness</p>
                 </div>
                 <div class="flex flex-col lg:flex-row pb-3">
                     <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
@@ -522,9 +513,23 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <div class="border curve-2 w-4/5 my-4">
+            <div class="border mx-1 curve-2 w-full md:w-4/5 lg:w-4/5 my-4">
                 <div class="flex justify-center py-3">
-                    <p class="text-blue text-sm">Type of exterior walls</p>
+                    <p class="text-blue font-extrabold text-sm">Type of exterior walls</p>
+                </div>
+                <div class="flex flex-col lg:flex-row pb-3">
+                    <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-blue px-3 text-sm py-3">Nothing</p>
+                    </div>
+                    <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-blue px-3 text-sm py-3">Simple cladding</p>
+                    </div>
+                    <div class="border lg:w-1/3 mt-1 bg-orange mx-2 curve-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-white px-3 text-sm py-3">Double Wall</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -532,58 +537,132 @@
         <div class="flex justify-center">
             <div class="border curve-2 w-full lg:w-4/5 md:w-4/5 mx-1 my-4">
                 <div class="flex justify-center py-3">
-                    <p class="text-orange text-sm">Insulation type</p>
+                    <p class="text-blue font-extrabold text-sm">Insulation type</p>
                 </div>
-                <div class="flex pb-3">
-                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
-                        <p class="text-blue px-3 text-sm py-3">Ceiling</p>
+                <div class="flex flex-col lg:flex-row md:flex-col sm:flex-col justify-between">
+                    <div class=" pb-3">
+                        <div class="mx-2 flex justify-center items-center">
+                            <p class="text-blue px-3 text-sm py-3">Ceiling</p>
+                        </div>
+                        <div class="flex flex-col lg:flex-row md:flex-col sm:flex-col mx-3">
+                            <div class="border mt-1 curve-2 mx-2 flex justify-center items-center">
+                                <p class="text-blue px-4 text-sm py-3">RE2022</p>
+                            </div>
+                            <div class="border mt-1 bg-orange  curve-2 flex justify-center items-center">
+                                <p class="text-white px-4 text-sm py-3">Simple </p>
+                            </div>
+                            <div class="border mt-1  curve-2 mx-2 flex justify-center items-center">
+                                <p class="text-blue px-3 text-sm py-3">Sans isolation</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="border bg-orange w-1/3 curve-2 flex justify-center items-center">
-                        <p class="text-white px-3 text-sm py-3">Walls</p>
+                    <div class=" pb-3">
+                        <div class="mx-2 flex justify-center items-center">
+                            <p class="text-blue px-3 text-sm py-3">Walls</p>
+                        </div>
+                        <div class="flex flex-col lg:flex-row md:flex-col sm:flex-col mx-3">
+                            <div class="border mt-1 bg-orange  curve-2 flex justify-center items-center">
+                                <p class="text-white px-4 text-sm py-3">RE2022</p>
+                            </div>
+                            <div class="border mt-1 curve-2 mx-2 flex justify-center items-center">
+                                <p class="text-blue px-4 text-sm py-3">Simple</p>
+                            </div>
+                            <div class="border mt-1  curve-2 mx-2 flex justify-center items-center">
+                                <p class="text-blue px-3 text-sm py-3">Sans isolation</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
-                        <p class="text-blue px-3 text-sm py-3">Floor</p>
-                    </div>
-                </div>
-                <div class="flex pb-3">
-                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
-                        <p class="text-blue px-3 text-sm py-3">RE2020</p>
-                    </div>
-                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
-                        <p class="text-blue px-3 text-sm py-3">Simple</p>
-                    </div>
-                    <div class="border w-1/3 curve-2 mx-2 flex justify-center items-center">
-                        <p class="text-blue px-3 text-sm py-3">Sans isolation</p>
+                    <div class=" pb-3">
+                        <div class="mx-2 flex justify-center items-center">
+                            <p class="text-blue px-3 text-sm py-3">Floor</p>
+                        </div>
+                        <div class="flex flex-col lg:flex-row md:flex-col sm:flex-col mx-3">
+                            <div class="border mt-1 bg-orange  curve-2 flex justify-center items-center">
+                                <p class="text-white px-4 text-sm py-3">RE2022</p>
+                            </div>
+                            <div class="border mt-1 curve-2 mx-2 flex justify-center items-center">
+                                <p class="text-blue px-4 text-sm py-3">Simple</p>
+                            </div>
+                            <div class="border mt-1  curve-2 mx-2 flex justify-center items-center">
+                                <p class="text-blue px-3 text-sm py-3">Sans isolation</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="flex justify-center">
-            <div class="border curve-2 w-4/5 my-2">
+            <div class="border mx-1 curve-2 w-full md:w-4/5 lg:w-4/5 my-4">
                 <div class="flex justify-center py-3">
-                    <p class="text-blue text-sm">Roofing</p>
+                    <p class="text-blue font-extrabold text-sm">Roofing</p>
+                </div>
+                <div class="flex flex-col lg:flex-row pb-3">
+                    <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-blue px-3 text-sm py-3">Without roof covering</p>
+                    </div>
+                    <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-blue px-3 text-sm py-3">Asphalt shingle</p>
+                    </div>
+                    <div class="border lg:w-1/3 mt-1 bg-orange mx-2 curve-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-white px-3 text-sm py-3">Bacacier</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="flex justify-center">
-            <div class="border curve-2 w-4/5 my-2">
+            <div class="border mx-1 curve-2 w-full md:w-4/5 lg:w-4/5 my-4">
                 <div class="flex justify-center py-3">
-                    <p class="text-blue text-sm">Wood protection (sprayable) Paint</p>
+                    <p class="text-blue font-extrabold text-sm">Wood protection (sprayable)</p>
+                </div>
+                <div class="flex flex-col lg:flex-row pb-3">
+                    <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <input checked id="checked-checkbox" type="checkbox" value=""
+                                class="w-4 h-4">
+                        <p class="text-blue px-3 text-sm py-3">Wood treatment (outdoor)</p>
+                    </div>
+                    <div class="border lg:w-1/3 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <input checked id="checked-checkbox" type="checkbox" value=""
+                                class="w-4 h-4">
+                        <p class="text-blue px-3 text-sm py-3">Wood treatment (indoor)</p>
+                    </div>
+                    <div class="border filter lg:w-1/3 mt-1 bg-orange mx-2 curve-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">Paint Interior</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="flex justify-center">
-            <div class="border curve-2 w-4/5 my-2">
+            <div class="border mx-1 curve-2 w-full md:w-4/5 lg:w-4/5 my-4">
                 <div class="flex justify-center py-3">
-                    <p class="text-blue text-sm">Terrace, Covered terrace</p>
+                    <p class="text-blue font-extrabold text-sm">Terrace, Covered terrace</p>
+                </div>
+                <div class="flex flex-col lg:flex-row pb-3">
+                    <div class="border lg:w-1/2 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <p class="text-blue px-3 text-sm py-3">Terrace area</p>
+                    </div>
+                    <div class="border lg:w-1/2 mt-1 bg-orange mx-2 curve-2 flex justify-center items-center">
+                        <p class="text-white px-3 text-sm py-3">Covered terrace area</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="flex justify-center">
-            <div class="border curve-2 w-4/5 my-2">
+            <div class="border mx-1 curve-2 w-full md:w-4/5 lg:w-4/5 my-4">
                 <div class="flex justify-center py-3">
-                    <p class="text-blue text-sm">Type of foundation</p>
+                    <p class="text-blue font-extrabold text-sm">Type of foundation</p>
+                </div>
+                <div class="flex flex-col lg:flex-row pb-3">
+                    <div class="border lg:w-1/2 mt-1 curve-2 mx-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-blue px-3 text-sm py-3">Steel or concrete pilling</p>
+                    </div>
+                    <div class="border lg:w-1/2 mt-1 bg-orange mx-2 curve-2 flex justify-center items-center">
+                        <img class="pl-2" width="50px" src="./assets/images/Madriers.png" alt="water">
+                        <p class="text-white px-3 text-sm py-3">Concrete slab +-3mm/10m</p>
+                    </div>
                 </div>
             </div>
         </div>
